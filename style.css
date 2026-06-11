@@ -1,0 +1,113 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS (Foco em Leitura Limpa)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fundo off-white para não cansar os olhos */
+    color: #212529; /* Texto quase preto para alto contraste */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container para o site não ficar esticado demais em telas grandes */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (Identidade Visual)
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2b8a3e; /* Verde que remete à educação e esperança */
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   3. SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+h2 {
+    color: #343a40;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none; /* Remove as bolinhas padrão */
+}
+
+ul li {
+    background-color: #f1f3f5;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #40c057; /* Detalhe em verde na lateral */
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   4. BOTÕES DE NAVEGAÇÃO (Fáceis de clicar no celular)
+   ========================================================================== */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    background-color: #3442df;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 3px 5px rgba(43, 138, 62, 0.2);
+}
+
+/* Efeito ao passar o mouse (ou tocar no celular) */
+nav a:hover, nav a:active {
+    background-color: #237032;
+}
+
+/* ==========================================================================
+   5. RODAPÉ
+   ========================================================================== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.85rem;
+    color: #868e96;
+}
