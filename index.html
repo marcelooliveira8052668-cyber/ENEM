@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="btn-dark-toggle" id="darkToggle">🌙</button>
 
-    <!-- Cabeçalho Principal -->
-    <header>
-        <h1>EducaENEM 🚀</h1>
-        <p>O portal de estudos feito para rodar em qualquer celular.</p>
+    <!-- Cabeçalho Principal com Capa de Fundo -->
+    <header class="capa-principal">
+        <div class="capa-conteudo">
+            <h1>EducaENEM 🚀</h1>
+            <p>O portal de estudos feito para rodar em qualquer celular.</p>
+        </div>
     </header>
 
     <hr>
@@ -48,6 +51,29 @@
     <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
     <p>Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.</p>
 </footer>
-<p><strong>Em construção...</strong></p>
+<script>
+        const darkToggleBtn = document.getElementById('darkToggle');
+        const bodyElement = document.body;
+
+        // Verifica se o usuário já tinha deixado o modo noturno ativo antes
+        if (localStorage.getItem('theme') === 'dark') {
+            bodyElement.classList.add('dark-mode');
+            darkToggleBtn.innerText = '☀️'; // Muda o ícone para sol
+        }
+
+        // Função que escuta o clique no botão
+        darkToggleBtn.addEventListener('click', () => {
+            bodyElement.classList.toggle('dark-mode');
+            
+            // Altera o ícone e salva a preferência do aluno no navegador
+            if (bodyElement.classList.contains('dark-mode')) {
+                darkToggleBtn.innerText = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                darkToggleBtn.innerText = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>

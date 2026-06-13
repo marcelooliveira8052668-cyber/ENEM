@@ -25,9 +25,11 @@
             flex-direction: column;
             gap: 12px;
         }
+        
+        /* Estilo idêntico à imagem de referência: blocos brancos separados (cards) */
         .opcao-btn {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
+            background: #ffffff;
+            border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 15px;
             text-align: left;
@@ -36,20 +38,29 @@
             transition: all 0.2s ease;
             color: #333;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center; /* Alinha a letra e o texto verticalmente */
+            gap: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            width: 100%;
         }
         .opcao-btn:hover:not(:disabled) {
-            background: #e9ecef;
+            background: #f8f9fa;
             border-color: #ced4da;
         }
+        
+        /* O quadradinho cinza destacado com a letra da alternativa */
         .opcao-btn .letra {
-            background: #dee2e6;
+            background: #e9ecef;
             color: #495057;
             font-weight: bold;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.9rem;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            flex-shrink: 0; /* Impede o quadrado de achatar no mobile */
         }
         .opcao-btn:disabled {
             cursor: not-allowed;
@@ -81,8 +92,9 @@
 
             <!-- Caixa onde o JavaScript vai gerar as 5 alternativas -->
             <div class="opcoes" id="container-opcoes">
-                <!-- Os botões vão nascer aqui dentro -->
+                <!-- Os botões vão nascer aqui dentro com o novo visual -->
             </div>
+            
         </main>
 
         <footer>
@@ -93,94 +105,143 @@
 
     <!-- SISTEMA DO SIMULADO EM JAVASCRIPT -->
     <script>
-        // 1. BANCO DE QUESTÕES ATUALIZADO (Agora com 7 questões!)
-const bancoQuestoes = [
-    {
-        disciplina: "História",
-        enunciado: "A Idade Média ocidental ficou marcada por uma organização social baseada no feudalismo. Uma das principais características econômicas desse período foi:",
-        alternativas: [
-            "O comércio marítimo global altamente desenvolvido.",
-            "A produção agrícola descentralizada voltada para a subsistência.",
-            "O uso generalizado de moedas de ouro em todas as transações.",
-            "A industrialização rápida das grandes corporações de ofício.",
-            "A abolição completa do trabalho servil nos campos europeus."
-        ],
-        correta: 1
-    },
-    {
-        disciplina: "Matemática",
-        enunciado: "Um mapa de escala 1:50.000 indica que cada 1 cm medido no desenho equivale a 50.000 cm no mundo real. Esse tipo de cálculo utiliza diretamente conceitos de:",
-        alternativas: [
-            "Geometria analítica e coordenadas espaciais.",
-            "Razão, proporção e semelhança de escalas.",
-            "Estatística pura e cálculo de desvio padrão.",
-            "Funções trigonométricas de matrizes complexas.",
-            "Álgebra linear e equações de terceiro grau."
-        ],
-        correta: 1
-    },
-    {
-        disciplina: "Biologia",
-        enunciado: "Em qualquer ecossistema saudável, o fluxo de energia é sempre unidirecional e decrescente. O nível trófico que retém a MAIOR quantidade de energia disponível é o dos:",
-        alternativas: [
-            "Consumidores primários (herbívoros).",
-            "Consumidores secundários (carnívoros).",
-            "Decompositores de matéria orgânica.",
-            "Produtores (seres autótrofos como plantas e algas).",
-            "Consumidores terciários (predadores de topo)."
-        ],
-        correta: 3
-    },
-    {
-        disciplina: "História do Brasil",
-        enunciado: "Durante o período do Brasil Colônia, a economy açucareira no Nordeste foi estruturada com base no modelo de Plantation. Esse modelo se caracterizava fundamentalmente por:",
-        alternativas: [
-            "Pequenas propriedades familiares, policultura e trabalho livre.",
-            "Latifúndios, monocultura, exportação e mão de obra escravizada.",
-            "Produção voltada exclusivamente para o mercado interno colonial.",
-            "Uso de tecnologia industrial avançada e forte proteção ambiental.",
-            "Parceria comercial livre com a Inglaterra sem controle de Portugal."
-        ],
-        correta: 1
-    },
-    {
-        disciplina: "História Geral",
-        enunciado: "A Revolução Industrial, iniciada na Inglaterra no século XVIII, alterou profundamente as relações de trabalho. Uma das principais consequências sociais desse processo foi:",
-        alternativas: [
-            "A distribuição igualitária dos lucros entre operários e patrões.",
-            "O fim do êxodo rural e o retorno em massa da população ao campo.",
-            "A consolidação de duas novas classes: a burguesia e o proletariado.",
-            "A proibição imediata do trabalho infantil em todas as fábricas.",
-            "O fortalecimento do artesanato doméstico frente às grandes máquinas."
-        ],
-        correta: 2
-    },
-    {
-        disciplina: "Geografia",
-        enunciado: "O crescimento rápido e desordenado das grandes cidades brasileiras no século XX gerou problemas como a favelização e a falta de infraestrutura. Esse fenômeno é conhecido como:",
-        alternativas: [
-            "Planejamento urbano sustentável.",
-            "Macrocefalia urbana e segregação socioespacial.",
-            "Descentralização industrial planejada.",
-            "Êxodo urbano em direção às áreas rurais.",
-            "Preservação dos cinturões verdes metropolitanos."
-        ],
-        correta: 1
-    },
-    {
-        disciplina: "Linguagens",
-        enunciado: "Um cartaz publicitário do Ministério da Saúde diz: 'Vacine seu filho contra a paralisia infantil. Procure o posto mais próximo neste sábado!'. O texto foca em convencer o leitor. Portanto, a função da linguagem que predomina nele é a:",
-        alternativas: [
-            "Função Emotiva ou Expressiva.",
-            "Função Metalinguística.",
-            "Função Referencial ou Denotativa.",
-            "Função Conativa ou Apelativa.",
-            "Função Poética."
-        ],
-        correta: 3
-    }
-];
-
+        
+        // 1. BANCO DE QUESTÕES ATUALIZADO (Agora com 9 questões, incluindo Grécia Antiga!)
+// 1. BANCO DE QUESTÕES ATUALIZADO (Com Egito Antigo no início!)
+        const bancoQuestoes = [
+            {
+                disciplina: "História - Egito Antigo",
+                enunciado: "O historiador grego Heródoto afirmou que 'o Egito é uma dádiva do Nilo'. Para além do determinismo geográfico, a sobrevivência e o sucesso daquela civilização dependeram da capacidade do Estado teocrático em organizar grandes obras de irrigação, utilizando a força de trabalho da população por meio de um sistema de:",
+                alternativas: [
+                    "Escravidão clássica mercantilista baseada no direito de propriedade.",
+                    "Servidão coletiva, onde os camponeses trabalhavam nas terras do Estado.",
+                    "Trabalho assalariado com direitos garantidos por códigos de leis escritas.",
+                    "Parceria feudal com divisão igualitária da produção entre nobres e felás.",
+                    "Corporações de ofício urbanas controladas por comerciantes estrangeiros."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "História - Faraó e Religião",
+                enunciado: "No Egito Antigo, a figura do Faraó não representava apenas o chefe político e militar do império, mas a própria encarnação de uma divindade viva na Terra. Esse modelo de governo, onde o poder político é diretamente legitimado pela autoridade religiosa, é denominado:",
+                alternativas: [
+                    "Democracia Direta.",
+                    "Monarquia Parlamentarista.",
+                    "Oligarquia Militar.",
+                    "Teocracia.",
+                    "República Presidencialista."
+                ],
+                correta: 3
+            },
+            {
+                disciplina: "História - Grécia Antiga",
+                enunciado: "Com o advento da pólis, uma nova forma de tempo social se estabelece no mundo grego. A expressão da palavra no espaço público torna-se o instrumento do poder político por excelência, o meio para exercer autoridade e governar na Ágora.",
+                alternativas: [
+                    "O fortalecimento do poder monárquico e militar absoluto.",
+                    "A consolidação do debate público e da cidadania no espaço urbano.",
+                    "A exclusão total da oratória nas decisões das assembleias.",
+                    "O declínio do comércio marítimo na região do Mediterrâneo.",
+                    "A criação de leis baseadas puramente em mitologias religiosas."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "História - Esparta",
+                enunciado: "O que legitima o domínio de Esparta sobre os hilotas (população servil) é a sua superioridade militar. Os espartanos dedicavam suas vidas ao treinamento para a guerra, mantendo uma estrutura social rígida.",
+                alternativas: [
+                    "Democrática e voltada para o desenvolvimento da filosofia comercial.",
+                    "Imperialista e governada por uma assembleia aberta a estrangeiros.",
+                    "Teocrática, onde o poder político estava nas mãos dos sacerdotes.",
+                    "Oligárquica, militarizada e focada no controle social rígido.",
+                    "Igualitária, onde servos e reis tinham os mesmos direitos políticos."
+                ],
+                correta: 3
+            },
+            {
+                disciplina: "História",
+                enunciado: "A Idade Média ocidental ficou marcada por uma organização social baseada no feudalismo. Uma das principais características econômicas desse período foi:",
+                alternativas: [
+                    "O comércio marítimo global altamente desenvolvido.",
+                    "A produção agrícola descentralizada voltada para a subsistência.",
+                    "O uso generalizado de moedas de ouro em todas as transações.",
+                    "A industrialização rápida das grandes corporações de ofício.",
+                    "A abolição completa do trabalho servil nos campos europeus."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "Matemática",
+                enunciado: "Um mapa de escala 1:50.000 indica que cada 1 cm medido no desenho equivale a 50.000 cm no mundo real. Esse tipo de cálculo utiliza diretamente conceitos de:",
+                alternativas: [
+                    "Geometria analítica e coordenadas espaciais.",
+                    "Razão, proporção e semelhança de escalas.",
+                    "Estatística pura e cálculo de desvio padrão.",
+                    "Funções trigonométricas de matrizes complexas.",
+                    "Álgebra linear e equações de terceiro grau."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "Biologia",
+                enunciado: "Em qualquer ecossistema saudável, o fluxo de energia é sempre unidirecional e decrescente. O nível trófico que retém a MAIOR quantidade de energia disponível é o dos:",
+                alternativas: [
+                    "Consumidores primários (herbívoros).",
+                    "Consumidores secundários (carnívoros).",
+                    "Decompositores de matéria orgânica.",
+                    "Produtores (seres autótrofos como plantas e algas).",
+                    "Consumidores terciários (predadores de topo)."
+                ],
+                correta: 3
+            },
+            {
+                disciplina: "História do Brasil",
+                enunciado: "Durante o período do Brasil Colônia, a economia açucareira no Nordeste foi estruturada com base no modelo de Plantation. Esse modelo se caracterizava fundamentalmente por:",
+                alternativas: [
+                    "Pequenas propriedades familiares, policultura e trabalho livre.",
+                    "Latifúndios, monocultura, exportação e mão de obra escravizada.",
+                    "Produção voltada exclusivamente para o mercado interno colonial.",
+                    "Uso de tecnologia industrial avançada e forte proteção ambiental.",
+                    "Parceria comercial livre com a Inglaterra sem controle de Portugal."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "História Geral",
+                enunciado: "A Revolução Industrial, iniciada na Inglaterra no século XVIII, alterou profundamente as relações de trabalho. Uma das principais consequências sociais desse processo foi:",
+                alternativas: [
+                    "A distribuição igualitária dos lucros entre operários e patrões.",
+                    "O fim do êxodo rural e o retorno em massa da população ao campo.",
+                    "A consolidação de duas novas classes: a burguesia e o proletariado.",
+                    "A proibição imediata do trabalho infantil em todas as fábricas.",
+                    "O fortalecimento do artesanato doméstico frente às grandes máquinas."
+                ],
+                correta: 2
+            },
+            {
+                disciplina: "Geografia",
+                enunciado: "O crescimento rápido e desordenado das grandes cidades brasileiras no século XX gerou problemas como a favelização e a falta de infraestrutura. Esse fenômeno é conhecido como:",
+                alternativas: [
+                    "Planejamento urbano sustentável.",
+                    "Macrocefalia urbana e segregação socioespacial.",
+                    "Descentralização industrial planejada.",
+                    "Êxodo urbano em direção às áreas rurais.",
+                    "Preservação dos cinturões verdes metropolitanos."
+                ],
+                correta: 1
+            },
+            {
+                disciplina: "Linguagens",
+                enunciado: "Um cartaz publicitário do Ministério da Saúde diz: 'Vacine seu filho contra a paralisia infantil. Procure o posto mais próximo neste sábado!'. O texto foca em convencer o leitor. Portanto, a função da linguagem que predomina nele é a:",
+                alternativas: [
+                    "Função Emotiva ou Expressiva.",
+                    "Função Metalinguística.",
+                    "Função Referencial ou Denotativa.",
+                    "Função Conativa ou Apelativa.",
+                    "Função Poética."
+                ],
+                correta: 3
+            }
+        ];
         // Variáveis de controle de jogo
         let questaoAtual = 0;
         let pontuacao = 0;
@@ -207,7 +268,7 @@ const bancoQuestoes = [
             q.alternativas.forEach((alternativa, indice) => {
                 const botao = document.createElement('button');
                 botao.classList.add('opcao-btn');
-                botao.innerHTML = `<span class="letra">${letras[indice]}</span> ${alternativa}`;
+                botao.innerHTML = `<span class="letra">${letras[indice]}</span> <span class="texto-alt">${alternativa}</span>`;
                 
                 // Configura para chamar a validação quando o aluno clicar
                 botao.addEventListener('click', () => verificarResposta(indice, botao));
@@ -229,18 +290,24 @@ const bancoQuestoes = [
                 botaoClicado.style.backgroundColor = "#2ecc71";
                 botaoClicado.style.color = "#ffffff";
                 botaoClicado.style.borderColor = "#2ecc71";
+                botaoClicado.querySelector('.letra').style.backgroundColor = "#27ae60";
+                botaoClicado.querySelector('.letra').style.color = "#ffffff";
                 pontuacao++;
             } else {
                 // Se errou: o botão clicado fica vermelho
                 botaoClicado.style.backgroundColor = "#e74c3c";
                 botaoClicado.style.color = "#ffffff";
                 botaoClicado.style.borderColor = "#e74c3c";
+                botaoClicado.querySelector('.letra').style.backgroundColor = "#c0392b";
+                botaoClicado.querySelector('.letra').style.color = "#ffffff";
                 
                 // E o botão correto acende em verde para ensinar o aluno
                 const botaoCerto = todosBotoes[q.correta];
                 botaoCerto.style.backgroundColor = "#2ecc71";
                 botaoCerto.style.color = "#ffffff";
                 botaoCerto.style.borderColor = "#2ecc71";
+                botaoCerto.querySelector('.letra').style.backgroundColor = "#27ae60";
+                botaoCerto.querySelector('.letra').style.color = "#ffffff";
             }
 
             // Aguarda 1.5 segundos e mostra o botão para avançar
