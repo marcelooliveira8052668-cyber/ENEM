@@ -1,125 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matérias para o ENEM - EducaENEM</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .area-card {
-            background: #ffffff;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .area-humanas { border-left: 6px solid #e67e22; }
-        .area-natureza { border-left: 6px solid #27ae60; }
-        .area-matematica { border-left: 6px solid #2980b9; }
-        .area-linguagens { border-left: 6px solid #9b59b6; }
+      .area-card {
+        background: #ffffff;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .area-humanas {
+        border-left: 6px solid #e67e22;
+      }
+      .area-natureza {
+        border-left: 6px solid #27ae60;
+      }
+      .area-matematica {
+        border-left: 6px solid #2980b9;
+      }
+      .area-linguagens {
+        border-left: 6px solid #9b59b6;
+      }
 
-        .area-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.15rem;
-            color: #343a40;
-        }
+      .area-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.15rem;
+        color: #343a40;
+      }
 
-        .lista-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+      .lista-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
 
-        .lista-links a {
-            color: #495057;
-            text-decoration: none;
-            padding: 8px 12px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
+      .lista-links a {
+        color: #495057;
+        text-decoration: none;
+        padding: 8px 12px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+      }
 
-        .lista-links a:hover, .lista-links a:active {
-            background: #e9ecef;
-            color: #212529;
-            padding-left: 16px;
-        }
+      .lista-links a:hover,
+      .lista-links a:active {
+        background: #e9ecef;
+        color: #212529;
+        padding-left: 16px;
+      }
 
-        .btn-voltar {
-            display: inline-block;
-            margin-top: 10px;
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+      .btn-voltar {
+        display: inline-block;
+        margin-top: 10px;
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
+      <header>
+        <h1>Portal de Matérias 📚</h1>
+        <p>Selecione o tema para ler o resumo direto ao ponto.</p>
+      </header>
 
-        <header>
-            <h1>Portal de Matérias 📚</h1>
-            <p>Selecione o tema para ler o resumo direto ao ponto.</p>
-        </header>
+      <main>
+        <!-- CIÊNCIAS HUMANAS -->
 
-        <main>
-            <!-- CIÊNCIAS HUMANAS -->
-<!-- CIÊNCIAS HUMANAS -->
-<!-- CIÊNCIAS HUMANAS -->
-<div class="area-card area-humanas">
-    <h3>🌍 Ciências Humanas</h3>
-    <div class="lista-links">
-        <a href="humanas-feudalismo.html">• História: Feudalismo e Idade Média</a>
-        <a href="humanas-brasil-colonia.html">• História: Brasil Colônia</a>
-        <a href="humanas-revolucao-industrial.html">• História: Revolução Industrial</a>
-        
-        <!-- OLHA A ÚLTIMA LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
-        <a href="humanas-urbanizacao.html">• Geografia: Urbanização e Globalização</a>
-        <a href="humanas-grecia-antiga.html" class="btn-principal">Estudar Grécia Antiga</a>
-        <li><a href="humanas-egito-antigo.html">Egito Antigo (Modo de Produção Asiático)</a></li>
-    </div>
-</div>
+        <div class="area-card area-humanas">
+          <h3>🌍 Ciências Humanas</h3>
+          <div class="lista-links">
+            <a href="humanas-egito-antigo.html"
+              >•Egito Antigo (Modo de Produção Asiático)</a
+            >
 
-<!-- CIÊNCIAS DA NATUREZA -->
-<!-- CIÊNCIAS DA NATUREZA -->
-<div class="area-card area-natureza">
-    <h3>🌱 Ciências da Natureza</h3>
-    <div class="lista-links">
-        <a href="natureza-ecologia.html">• Biologia: Ecologia e Ecossistemas</a>
-        <a href="natureza-quimica.html">• Química: Introdução à Química Orgânica</a>
-        
-        <!-- OLHA A LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
-        <a href="natureza-fisica.html">• Física: Cinemática e Mecânica</a>
-    </div>
-</div>
-<!-- MATEMÁTICA -->
-<div class="area-card area-matematica">
-    <h3>📐 Matemática e suas Tecnologias</h3>
-    <div class="lista-links">
-        <a href="matematica-proporcao.html">• Razão, Proporção e Regra de Três</a>
-        
-        <!-- OLHA A LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
-        <a href="matematica-estatistica.html">• Estatística (Média, Mediana e Moda)</a>
-    </div>
-</div>
-<div class="area-card area-linguagens">
-    <h3>✍️ Linguagens e Redação</h3>
-    <div class="lista-links">
-        <a href="linguagens-funcoes.html">• Funções da Linguagem</a>
-        
-        <a href="linguagens-redacao.html">• Estrutura da Redação Nota 1000</a>
-    </div>
-</div>
-        </main>
+            <a href="humanas-grecia-antiga.html" class="btn-principal"
+              >•Estudar Grécia Antiga</a
+            >
+
+            <a href="humanas-roma-antiga.html"
+              >•Roma Antiga: Da República ao Império</a
+            >
+
+            <a href="humanas-feudalismo.html"
+              >• História: Feudalismo e Idade Média</a
+            >
+            <a href="humanas-brasil-colonia.html">• História: Brasil Colônia</a>
+
+            <a href="humanas-revolucao-industrial.html"
+              >• História: Revolução Industrial</a
+            >
+
+            <a href="humanas-brasil-republica.html"
+              >•Brasil República: República Velha</a
+            >
+
+            <!-- OLHA A ÚLTIMA LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
+            <a href="humanas-urbanizacao.html"
+              >• Geografia: Urbanização e Globalização</a
+            >
+          </div>
+        </div>
+
+        <!-- CIÊNCIAS DA NATUREZA -->
+        <!-- CIÊNCIAS DA NATUREZA -->
+        <div class="area-card area-natureza">
+          <h3>🌱 Ciências da Natureza</h3>
+          <div class="lista-links">
+            <a href="natureza-ecologia.html"
+              >• Biologia: Ecologia e Ecossistemas</a
+            >
+            <a href="natureza-quimica.html"
+              >• Química: Introdução à Química Orgânica</a
+            >
+
+            <!-- OLHA A LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
+            <a href="natureza-fisica.html">• Física: Cinemática e Mecânica</a>
+          </div>
+        </div>
+        <!-- MATEMÁTICA -->
+        <div class="area-card area-matematica">
+          <h3>📐 Matemática e suas Tecnologias</h3>
+          <div class="lista-links">
+            <a href="matematica-proporcao.html"
+              >• Razão, Proporção e Regra de Três</a
+            >
+
+            <!-- OLHA A LINHA ATUALIZADA BEM AQUI EMBAIXO: -->
+            <a href="matematica-estatistica.html"
+              >• Estatística (Média, Mediana e Moda)</a
+            >
+          </div>
+        </div>
+        <div class="area-card area-linguagens">
+          <h3>✍️ Linguagens e Redação</h3>
+          <div class="lista-links">
+            <a href="linguagens-funcoes.html">• Funções da Linguagem</a>
+
+            <a href="linguagens-redacao.html"
+              >• Estrutura da Redação Nota 1000</a
+            >
+
+
+            
+          </div>
+        </div>
+        <!-- Copie e cole esta linha na sua lista de matérias de Linguagens -->
+
+  <a href="linguagens-ingles.html" class="link-materia">
+    • Inglês Instrumental (Traduções e Dicas)
+  </a>
+      </main>
 
       <footer class="rodape-direitos">
-    <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
-    <p>Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.</p>
-</footer>
-
+        <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido e idealizado pelo
+          <strong>Prof. Marcelo Oliveira</strong>.
+        </p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

@@ -1,101 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resumo: Cinemática e Mecânica - EducaENEM</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .conteudo-resumo h2 {
-            color: #27ae60; /* Verde para manter a identidade de natureza */
-            margin-top: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .conteudo-resumo p {
-            margin-bottom: 15px;
-            color: #333;
-            text-align: justify;
-        }
-        .box-formula {
-            background: #e8f8f0;
-            border-left: 4px solid #27ae60;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            font-family: monospace;
-            font-size: 1.1rem;
-            text-align: center;
-        }
-        .box-atencao {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
-        .btn-voltar {
-            display: inline-block;
-            margin-top: 20px;
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+      .conteudo-resumo h2 {
+        color: #27ae60; /* Verde para manter a identidade de natureza */
+        margin-top: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+      }
+      .conteudo-resumo p {
+        margin-bottom: 15px;
+        color: #333;
+        text-align: justify;
+      }
+      .box-formula {
+        background: #e8f8f0;
+        border-left: 4px solid #27ae60;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 15px 0;
+        font-family: monospace;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .box-atencao {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-size: 0.95rem;
+      }
+      .btn-voltar {
+        display: inline-block;
+        margin-top: 20px;
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
+      <header>
+        <p>Ciências da Natureza > Física</p>
+        <h1>Cinemática e Mecânica ⚡</h1>
+      </header>
 
-        <header>
-            <p>Ciências da Natureza > Física</p>
-            <h1>Cinemática e Mecânica ⚡</h1>
-        </header>
+      <main class="conteudo-resumo">
+        <p>
+          A <strong>Mecânica</strong> é a parte da física que estuda o movimento
+          dos corpos. No ENEM, mais do que decorar fórmulas gigantes, você
+          precisa entender o conceito por trás dos movimentos do nosso
+          cotidiano.
+        </p>
 
-        <main class="conteudo-resumo">
-            <p>A <strong>Mecânica</strong> é a parte da física que estuda o movimento dos corpos. No ENEM, mais do que decorar fórmulas gigantes, você precisa entender o conceito por trás dos movimentos do nosso cotidiano.</p>
+        <h2>1. Velocidade Média (O básico obrigatório)</h2>
+        <p>
+          A velocidade média mede o quão rápido um corpo mudou de posição em um
+          determinado intervalo de tempo.
+        </p>
 
-            <h2>1. Velocidade Média (O básico obrigatório)</h2>
-            <p>A velocidade média mede o quão rápido um corpo mudou de posição em um determinado intervalo de tempo.</p>
-            
-            <div class="box-formula">
-                Vm = Δs / Δt <br>
-                (Velocidade = Distância / Tempo)
-            </div>
+        <div class="box-formula">
+          Vm = Δs / Δt <br />
+          (Velocidade = Distância / Tempo)
+        </div>
 
-            <p><strong>⚠️ Dica de Ouro para conversão:</strong> O ENEM adora misturar quilômetros por hora (km/h) com metros por segundo (m/s). Para converter:</p>
-            <ul>
-                <li>De <strong>m/s para km/h</strong>: Multiplique por 3,6.</li>
-                <li>De <strong>km/h para m/s</strong>: Divida por 3,6.</li>
-            </ul>
+        <p>
+          <strong>⚠️ Dica de Ouro para conversão:</strong> O ENEM adora misturar
+          quilômetros por hora (km/h) com metros por segundo (m/s). Para
+          converter:
+        </p>
+        <ul>
+          <li>De <strong>m/s para km/h</strong>: Multiplique por 3,6.</li>
+          <li>De <strong>km/h para m/s</strong>: Divida por 3,6.</li>
+        </ul>
 
-            <h2>2. Os Dois Movimentos Principais</h2>
-            <ul>
-                <li><strong>Movimento Uniforme (MU):</strong> A velocidade é constante, ou seja, o corpo não acelera e nem freia. Ele percorre distâncias iguais em tempos iguais.</li>
-                <li><strong>Movimento Uniformemente Variado (MUV):</strong> Aqui a velocidade muda porque existe <strong>aceleração</strong> constante. O corpo fica mais rápido ou mais lento ao longo do tempo (como um carro arrancando ou freando no semáforo).</li>
-            </ul>
+        <h2>2. Os Dois Movimentos Principais</h2>
+        <ul>
+          <li>
+            <strong>Movimento Uniforme (MU):</strong> A velocidade é constante,
+            ou seja, o corpo não acelera e nem freia. Ele percorre distâncias
+            iguais em tempos iguais.
+          </li>
+          <li>
+            <strong>Movimento Uniformemente Variado (MUV):</strong> Aqui a
+            velocidade muda porque existe <strong>aceleração</strong> constante.
+            O corpo fica mais rápido ou mais lento ao longo do tempo (como um
+            carro arrancando ou freando no semáforo).
+          </li>
+        </ul>
 
-            <h2>3. As Leis de Newton</h2>
-            <p>A base da mecânica se resume a três regras que explicam por que as coisas se movem:</p>
-            <ul>
-                <li><strong>1ª Lei (Inércia):</strong> Um corpo parado tende a ficar parado, e um corpo em movimento tende a continuar se movendo em linha reta, a menos que uma força o force a parar. (É por isso que precisamos usar cinto de segurança!).</li>
-                <li><strong>2ª Lei (Princípio Fundamental):</strong> Para mudar o movimento de um objeto, você precisa aplicar uma força. Essa força é igual à massa do objeto multiplicada pela aceleração (Força = massa x aceleração).</li>
-                <li><strong>3ª Lei (Ação e Reação):</strong> Para toda força de ação, existe uma força de reação de mesma intensidade, mas no sentido oposto. (Se você chuta uma parede, seu pé sofre a mesma força de volta).</li>
-            </ul>
+        <h2>3. As Leis de Newton</h2>
+        <p>
+          A base da mecânica se resume a três regras que explicam por que as
+          coisas se movem:
+        </p>
+        <ul>
+          <li>
+            <strong>1ª Lei (Inércia):</strong> Um corpo parado tende a ficar
+            parado, e um corpo em movimento tende a continuar se movendo em
+            linha reta, a menos que uma força o force a parar. (É por isso que
+            precisamos usar cinto de segurança!).
+          </li>
+          <li>
+            <strong>2ª Lei (Princípio Fundamental):</strong> Para mudar o
+            movimento de um objeto, você precisa aplicar uma força. Essa força é
+            igual à massa do objeto multiplicada pela aceleração (Força = massa
+            x aceleração).
+          </li>
+          <li>
+            <strong>3ª Lei (Ação e Reação):</strong> Para toda força de ação,
+            existe uma força de reação de mesma intensidade, mas no sentido
+            oposto. (Se você chuta uma parede, seu pé sofre a mesma força de
+            volta).
+          </li>
+        </ul>
 
-            <div class="box-atencao">
-                <strong>⚠️ Como o ENEM cobra isso?</strong><br>
-                O ENEM ama cobrar a distância de segurança entre carros na estrada. Ele mistura o tempo que o motorista leva para reagir e pisar no freio (Movimento Uniforme) com o tempo que o carro leva para parar completamente arrastando os pneus (Movimento Variado). Fique muito atento aos gráficos de velocidade versus tempo!
-            </div>
-        </main>
+        <div class="box-atencao">
+          <strong>⚠️ Como o ENEM cobra isso?</strong><br />
+          O ENEM ama cobrar a distância de segurança entre carros na estrada.
+          Ele mistura o tempo que o motorista leva para reagir e pisar no freio
+          (Movimento Uniforme) com o tempo que o carro leva para parar
+          completamente arrastando os pneus (Movimento Variado). Fique muito
+          atento aos gráficos de velocidade versus tempo!
+        </div>
+      </main>
 
-       <footer class="rodape-direitos">
-    <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
-    <p>Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.</p>
-</footer>
-
+      <footer class="rodape-direitos">
+        <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido e idealizado pelo
+          <strong>Prof. Marcelo Oliveira</strong>.
+        </p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

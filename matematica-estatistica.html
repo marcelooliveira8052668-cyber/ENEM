@@ -1,97 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resumo: Estatística - EducaENEM</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .conteudo-resumo h2 {
-            color: #2980b9; /* Azul para manter a identidade de matemática */
-            margin-top: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .conteudo-resumo p {
-            margin-bottom: 15px;
-            color: #333;
-            text-align: justify;
-        }
-        .box-conceito {
-            background: #e8f4f8;
-            border-left: 4px solid #2980b9;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .box-conceito strong {
-            color: #246694;
-        }
-        .box-atencao {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
-        .btn-voltar {
-            display: inline-block;
-            margin-top: 20px;
-            color: #6c757d;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+      .conteudo-resumo h2 {
+        color: #2980b9; /* Azul para manter a identidade de matemática */
+        margin-top: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+      }
+      .conteudo-resumo p {
+        margin-bottom: 15px;
+        color: #333;
+        text-align: justify;
+      }
+      .box-conceito {
+        background: #e8f4f8;
+        border-left: 4px solid #2980b9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .box-conceito strong {
+        color: #246694;
+      }
+      .box-atencao {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+        font-size: 0.95rem;
+      }
+      .btn-voltar {
+        display: inline-block;
+        margin-top: 20px;
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
+      <header>
+        <p>Matemática > Estatística</p>
+        <h1>Estatística: Média, Mediana e Moda 📊</h1>
+      </header>
 
-        <header>
-            <p>Matemática > Estatística</p>
-            <h1>Estatística: Média, Mediana e Moda 📊</h1>
-        </header>
+      <main class="conteudo-resumo">
+        <p>
+          A <strong>Estatística</strong> no ENEM serve para testar a sua
+          capacidade de interpretar tabelas, gráficos do cotidiano e calcular as
+          chamadas "medidas de tendência central". Vamos dominar as três
+          principais:
+        </p>
 
-        <main class="conteudo-resumo">
-            <p>A <strong>Estatística</strong> no ENEM serve para testar a sua capacidade de interpretar tabelas, gráficos do cotidiano e calcular as chamadas "medidas de tendência central". Vamos dominar as três principais:</p>
+        <h2>1. Média Aritmética</h2>
+        <p>
+          É a medida mais famosa. Para calcular, você
+          <strong>soma todos os valores</strong> e
+          <strong>divide pelo número total de elementos</strong> que você somou.
+        </p>
+        <div class="box-conceito">
+          <strong>Exemplo Simples:</strong> As notas de um aluno foram 6, 7 e 8.
+          <br />
+          Soma = 6 + 7 + 8 = 21. <br />
+          Como são 3 notas, dividimos por 3: 21 ÷ 3 = <strong>Média 7</strong>.
+        </div>
+        <p>
+          <strong>⚠️ Cuidado com a Média Ponderada:</strong> É quando os números
+          têm pesos diferentes. Em vez de só somar, você multiplica cada número
+          pelo seu peso, soma os resultados e divide pela soma dos pesos.
+        </p>
 
-            <h2>1. Média Aritmética</h2>
-            <p>É a medida mais famosa. Para calcular, você <strong>soma todos os valores</strong> e <strong>divide pelo número total de elementos</strong> que você somou.</p>
-            <div class="box-conceito">
-                <strong>Exemplo Simples:</strong> As notas de um aluno foram 6, 7 e 8. <br>
-                Soma = 6 + 7 + 8 = 21. <br>
-                Como são 3 notas, dividimos por 3: 21 ÷ 3 = <strong>Média 7</strong>.
-            </div>
-            <p><strong>⚠️ Cuidado com a Média Ponderada:</strong> É quando os números têm pesos diferentes. Em vez de só somar, você multiplica cada número pelo seu peso, soma os resultados e divide pela soma dos pesos.</p>
+        <h2>2. Mediana (O termo do meio)</h2>
+        <p>
+          A Mediana é o valor que fica exatamente no centro de uma lista de
+          números. Mas atenção: para achar a mediana, existe um passo
+          obrigatório que muita gente esquece e erra a questão:
+        </p>
+        <div class="box-conceito">
+          <strong>Passo 1:</strong> Organize os números em ordem crescente (do
+          menor para o maior). Essa lista organizada se chama
+          <em>Rol</em>.<br />
+          <strong>Passo 2:</strong> Encontre o centro.<br />
+          • Se a quantidade de números for <strong>ÍMPAR</strong>: A mediana é o
+          número que está bem no meio.<br />
+          • Se a quantidade de números for <strong>PAR</strong>: Você pega os
+          <strong>dois números do meio</strong>, soma eles e divide por 2.
+        </div>
 
-            <h2>2. Mediana (O termo do meio)</h2>
-            <p>A Mediana é o valor que fica exatamente no centro de uma lista de números. Mas atenção: para achar a mediana, existe um passo obrigatório que muita gente esquece e erra a questão:</p>
-            <div class="box-conceito">
-                <strong>Passo 1:</strong> Organize os números em ordem crescente (do menor para o maior). Essa lista organizada se chama <em>Rol</em>.<br>
-                <strong>Passo 2:</strong> Encontre o centro.<br>
-                • Se a quantidade de números for <strong>ÍMPAR</strong>: A mediana é o número que está bem no meio.<br>
-                • Se a quantidade de números for <strong>PAR</strong>: Você pega os <strong>dois números do meio</strong>, soma eles e divide por 2.
-            </div>
+        <h2>3. Moda (O que mais se repete)</h2>
+        <p>
+          Assim como uma roupa que está na moda é aquela que todo mundo está
+          usando, a <strong>Moda</strong> na estatística é simplesmente o valor
+          que <strong>aparece com maior frequência</strong> (o que mais se
+          repete) na lista.
+        </p>
+        <div class="box-conceito">
+          <strong>Exemplo:</strong> Na lista [2, 3, 5, 5, 7, 8], o número
+          <strong>5</strong> é a moda porque aparece duas vezes e os outros
+          apenas uma. Se nenhum número se repetir, a lista é chamada de
+          <em>amodal</em>.
+        </div>
 
-            <h2>3. Moda (O que mais se repete)</h2>
-            <p>Assim como uma roupa que está na moda é aquela que todo mundo está usando, a <strong>Moda</strong> na estatística é simplesmente o valor que <strong>aparece com maior frequência</strong> (o que mais se repete) na lista.</p>
-            <div class="box-conceito">
-                <strong>Exemplo:</strong> Na lista [2, 3, 5, 5, 7, 8], o número <strong>5</strong> é a moda porque aparece duas vezes e os outros apenas uma. Se nenhum número se repetir, a lista é chamada de <em>amodal</em>.
-            </div>
-
-            <div class="box-atencao">
-                <strong>⚠️ Como o ENEM cobra isso?</strong><br>
-                O ENEM adora colocar tabelas gigantes com salários de funcionários ou desempenho de atletas em várias rodadas. Ele vai te pedir para calcular a média, a mediana e a moda desses dados e depois perguntar qual delas foi a maior ou qual representa melhor a situação. Muita atenção na hora de organizar a lista da Mediana!
-            </div>
-        </main>
+        <div class="box-atencao">
+          <strong>⚠️ Como o ENEM cobra isso?</strong><br />
+          O ENEM adora colocar tabelas gigantes com salários de funcionários ou
+          desempenho de atletas em várias rodadas. Ele vai te pedir para
+          calcular a média, a mediana e a moda desses dados e depois perguntar
+          qual delas foi a maior ou qual representa melhor a situação. Muita
+          atenção na hora de organizar a lista da Mediana!
+        </div>
+      </main>
 
       <footer class="rodape-direitos">
-    <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
-    <p>Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.</p>
-</footer>
-
+        <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido e idealizado pelo
+          <strong>Prof. Marcelo Oliveira</strong>.
+        </p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

@@ -1,79 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENEM Leve - Estude Sem Gastar Dados</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <button class="btn-dark-toggle" id="darkToggle">🌙</button>
 
     <!-- Cabeçalho Principal com Capa de Fundo -->
     <header class="capa-principal">
-        <div class="capa-conteudo">
-            <h1>EducaENEM 🚀</h1>
-            <p>O portal de estudos feito para rodar em qualquer celular.</p>
-        </div>
+      <div class="capa-conteudo">
+        <h1>EducaENEM 🚀</h1>
+        <p>O portal de estudos feito para rodar em qualquer celular.</p>
+      </div>
     </header>
 
-    <hr>
+    <hr />
 
     <!-- Seção de Destaques / Benefícios -->
     <main>
-        <section>
-            <h2>Por que estudar por aqui?</h2>
-            <ul>
-                <li><strong>Ultra-Leve:</strong> Não consome quase nada do seu plano de internet.</li>
-                <li><strong>Direto ao ponto:</strong> Sem propagandas ou vídeos pesados que travam o celular.</li>
-                <li><strong>Focado em Mobile:</strong> Botões grandes e textos fáceis de ler no ônibus.</li>
-            </ul>
-        </section>
+      <section>
+        <h2>Por que estudar por aqui?</h2>
+        <ul>
+          <li>
+            <strong>Ultra-Leve:</strong> Não consome quase nada do seu plano de
+            internet.
+          </li>
+          <li>
+            <strong>Direto ao ponto:</strong> Sem propagandas ou vídeos pesados
+            que travam o celular.
+          </li>
+          <li>
+            <strong>Focado em Mobile:</strong> Botões grandes e textos fáceis de
+            ler no ônibus.
+          </li>
+        </ul>
+      </section>
 
-        <hr>
+      <hr />
 
-        <!-- Menu de Navegação Prática -->
-        <section>
-            <h2>O que você quer fazer hoje?</h2>
-            <nav>
-                <!-- No futuro, esses links vão para as outras páginas do seu site -->
-                <a href="resumos.html">📚 Ler Resumos das Matérias</a>
-                <!-- Mude de href="#" ou href="#simulado" para: -->
-<a href="simulado.html" class="btn-principal">Fazer Simulado Interativo</a>
-            </nav>
-        </section>
+      <!-- Menu de Navegação Prática -->
+      <section>
+        <h2>O que você quer fazer hoje?</h2>
+        <nav>
+          <!-- No futuro, esses links vão para as outras páginas do seu site -->
+          <a href="resumos.html">📚 Ler Resumos das Matérias</a>
+          <!-- Mude de href="#" ou href="#simulado" para: -->
+          <a href="simulado.html" class="btn-principal"
+            >Fazer Simulado Interativo</a
+          >
+        </nav>
+      </section>
     </main>
 
-    <hr>
+    <hr />
 
     <!-- Rodapé Emocional e Informativo -->
     <footer class="rodape-direitos">
-    <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
-    <p>Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.</p>
-</footer>
-<script>
-        const darkToggleBtn = document.getElementById('darkToggle');
-        const bodyElement = document.body;
+      <p>&copy; 2026 EducaENEM - Todos os direitos reservados.</p>
+      <p>
+        Desenvolvido e idealizado pelo <strong>Prof. Marcelo Oliveira</strong>.
+      </p>
+    </footer>
+    <script>
+      const darkToggleBtn = document.getElementById("darkToggle");
+      const bodyElement = document.body;
 
-        // Verifica se o usuário já tinha deixado o modo noturno ativo antes
-        if (localStorage.getItem('theme') === 'dark') {
-            bodyElement.classList.add('dark-mode');
-            darkToggleBtn.innerText = '☀️'; // Muda o ícone para sol
+      // Verifica se o usuário já tinha deixado o modo noturno ativo antes
+      if (localStorage.getItem("theme") === "dark") {
+        bodyElement.classList.add("dark-mode");
+        darkToggleBtn.innerText = "☀️"; // Muda o ícone para sol
+      }
+
+      // Função que escuta o clique no botão
+      darkToggleBtn.addEventListener("click", () => {
+        bodyElement.classList.toggle("dark-mode");
+
+        // Altera o ícone e salva a preferência do aluno no navegador
+        if (bodyElement.classList.contains("dark-mode")) {
+          darkToggleBtn.innerText = "☀️";
+          localStorage.setItem("theme", "dark");
+        } else {
+          darkToggleBtn.innerText = "🌙";
+          localStorage.setItem("theme", "light");
         }
-
-        // Função que escuta o clique no botão
-        darkToggleBtn.addEventListener('click', () => {
-            bodyElement.classList.toggle('dark-mode');
-            
-            // Altera o ícone e salva a preferência do aluno no navegador
-            if (bodyElement.classList.contains('dark-mode')) {
-                darkToggleBtn.innerText = '☀️';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                darkToggleBtn.innerText = '🌙';
-                localStorage.setItem('theme', 'light');
-            }
-        });
+      });
     </script>
-</body>
+  </body>
 </html>

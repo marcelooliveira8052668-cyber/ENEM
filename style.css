@@ -4,36 +4,36 @@
    1. CONFIGURAÇÕES GERAIS (Foco em Leitura Limpa)
    ========================================================================== */
 
-   /* =======================================================
+/* =======================================================
    REGRAS DO MODO NOTURNO (Substitua o bloco anterior por este)
    ======================================================= */
 
 /* Botão Flutuante que fica no cantinho da tela */
 .btn-dark-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: #34495e;
-    color: white;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    z-index: 9999; /* Fica por cima de absolutamente tudo */
-    transition: transform 0.2s ease;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #34495e;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Fica por cima de absolutamente tudo */
+  transition: transform 0.2s ease;
 }
 
 .btn-dark-toggle:active {
-    transform: scale(0.9); /* Efeito de clique no celular */
+  transform: scale(0.9); /* Efeito de clique no celular */
 }
 
 /* Quando o Modo Noturno ativar, ele força essas cores em tudo */
 body.dark-mode {
-    background-color: #121212 !important;
-    background-image: none !important; /* Remove fundos de imagem se houver */
-    color: #e0e0e0 !important;
+  background-color: #121212 !important;
+  background-image: none !important; /* Remove fundos de imagem se houver */
+  color: #e0e0e0 !important;
 }
 
 /* Força os blocos, caixas de perguntas, listas e botões de opções a ficarem escuros */
@@ -43,184 +43,219 @@ body.dark-mode .opcao-btn,
 body.dark-mode main,
 body.dark-mode ul,
 body.dark-mode li {
-    background-color: #1e1e1e !important;
-    color: #e0e0e0 !important;
-    border-color: #333333 !important;
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #333333 !important;
 }
 
 /* Garante que os títulos e textos fiquem claros no modo escuro */
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
 body.dark-mode p,
 body.dark-mode span,
 body.dark-mode strong {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* Ajuste sutil para os links e botões de voltar não sumirem no escuro */
-body.dark-mode .btn-voltar, 
+body.dark-mode .btn-voltar,
 body.dark-mode footer p {
-    color: #aaaaaa !important;
+  color: #aaaaaa !important;
 }
 
 /* Efeito de transição suave para não agredir a vista ao mudar */
 body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa; /* Fundo off-white para não cansar os olhos */
-    color: #212529; /* Texto quase preto para alto contraste */
-    line-height: 1.6;
-    padding: 20px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: #f8f9fa; /* Fundo off-white para não cansar os olhos */
+  color: #212529; /* Texto quase preto para alto contraste */
+  line-height: 1.6;
+  padding: 20px;
 }
 
 /* Container para o site não ficar esticado demais em telas grandes */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* ==========================================================================
    2. CABEÇALHO (Identidade Visual)
    ========================================================================== */
 header {
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 2px solid #e9ecef;
-    margin-bottom: 25px;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 25px;
 }
 
 header h1 {
-    color: #2b8a3e; /* Verde que remete à educação e esperança */
-    font-size: 2rem;
-    margin-bottom: 8px;
+  color: #2b8a3e; /* Verde que remete à educação e esperança */
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 header p {
-    color: #6c757d;
-    font-size: 1rem;
+  color: #6c757d;
+  font-size: 1rem;
 }
 
 /* ==========================================================================
    3. SEÇÕES DE CONTEÚDO
    ========================================================================== */
 h2 {
-    color: #343a40;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+  color: #343a40;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 
 section {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 ul {
-    list-style-type: none; /* Remove as bolinhas padrão */
+  list-style-type: none; /* Remove as bolinhas padrão */
 }
 
 ul li {
-    background-color: #f1f3f5;
-    margin-bottom: 10px;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border-left: 4px solid #40c057; /* Detalhe em verde na lateral */
-    font-size: 0.95rem;
+  background-color: #f1f3f5;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #40c057; /* Detalhe em verde na lateral */
+  font-size: 0.95rem;
 }
 
 /* ==========================================================================
    4. BOTÕES DE NAVEGAÇÃO (Fáceis de clicar no celular)
    ========================================================================== */
 nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaço entre os botões */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os botões */
 }
 
 nav a {
-    display: block;
-    text-align: center;
-    background-color: #3442df;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 16px 20px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    transition: background-color 0.2s ease;
-    box-shadow: 0 3px 5px rgba(43, 138, 62, 0.2);
+  display: block;
+  text-align: center;
+  background-color: #3442df;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 3px 5px rgba(43, 138, 62, 0.2);
 }
 
 /* Efeito ao passar o mouse (ou tocar no celular) */
-nav a:hover, nav a:active {
-    background-color: #237032;
+nav a:hover,
+nav a:active {
+  background-color: #237032;
 }
 
 /* ==========================================================================
    5. RODAPÉ
    ========================================================================== */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #e9ecef;
-    font-size: 0.85rem;
-    color: #868e96;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.85rem;
+  color: #868e96;
 }
 
 /* Estilo do Rodapé de Direitos Autorais */
 .rodape-direitos {
-    margin-top: 40px;
-    padding: 20px 0;
-    border-top: 1px solid #dee2e6;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #6c757d;
-    line-height: 1.6;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6c757d;
+  line-height: 1.6;
 }
 
 .rodape-direitos strong {
-    color: #343a40;
+  color: #343a40;
 }
 
 /* Estilo da Capa de Fundo com a Foto Limpa (Sem Degradê) */
 .capa-principal {
-    /* Removido o degradê azul: agora apenas a imagem pura é carregada */
-    background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=70&w=800'); 
-    
-    background-size: cover; /* Faz a foto cobrir todo o espaço da capa */
-    background-position: center 30%; /* Centraliza nos estudantes */
-    background-repeat: no-repeat;
-    color: #ffffff; /* Texto em branco */
-    padding: 60px 20px; /* Espaço para mostrar bem a imagem */
-    text-align: center;
-    border-radius: 0 0 15px 15px; /* Cantos arredondados na parte de baixo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
+  /* Removido o degradê azul: agora apenas a imagem pura é carregada */
+  background: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=70&w=800");
+
+  background-size: cover; /* Faz a foto cobrir todo o espaço da capa */
+  background-position: center 30%; /* Centraliza nos estudantes */
+  background-repeat: no-repeat;
+  color: #ffffff; /* Texto em branco */
+  padding: 60px 20px; /* Espaço para mostrar bem a imagem */
+  text-align: center;
+  border-radius: 0 0 15px 15px; /* Cantos arredondados na parte de baixo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
 }
 
 /* Sombra preta reforçada nos textos para dar leitura sobre a foto clara */
 .capa-conteudo h1 {
-    font-size: 2.2rem;
-    margin: 0 0 10px 0;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8);
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  text-shadow:
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    -1px -1px 0 rgba(0, 0, 0, 0.8),
+    1px -1px 0 rgba(0, 0, 0, 0.8),
+    -1px 1px 0 rgba(0, 0, 0, 0.8),
+    1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 
 .capa-conteudo p {
-    font-size: 1.15rem;
-    margin: 0;
-    font-weight: bold;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0,0,0,0.8), 1px -1px 0 rgba(0,0,0,0.8), -1px 1px 0 rgba(0,0,0,0.8), 1px 1px 0 rgba(0,0,0,0.8);
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: bold;
+  text-shadow:
+    1px 1px 6px rgba(0, 0, 0, 0.8),
+    -1px -1px 0 rgba(0, 0, 0, 0.8),
+    1px -1px 0 rgba(0, 0, 0, 0.8),
+    -1px 1px 0 rgba(0, 0, 0, 0.8),
+    1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+.link-materia {
+  display: block;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border: 1fr solid #dee2e6;
+  border-radius: 6px;
+  color: #9b59b6; /* Roxo cor de Linguagens */
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.link-materia:hover {
+  background: #f4ecf7;
+  border-color: #9b59b6;
+  transform: translateX(5px); /* Dá um leve empurrãozinho para o lado no hover */
 }
